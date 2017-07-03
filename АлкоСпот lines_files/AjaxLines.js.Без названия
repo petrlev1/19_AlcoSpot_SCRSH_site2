@@ -1,0 +1,66 @@
+﻿var AjaxLines = {
+    loadWaiting: false,
+    usepopupnotifications: false,
+    urlUpdate: "", //урл запроса на обновку,
+    lineProductSp: "", //селектор продукта на линии,
+    aqueousAlcoholicSelectorSp: "",
+    anhydrousAlcoholicSelectorSp: "",
+    volumeFlowCurrentSelectorSp: "",
+    modeSelectorSp: "",
+
+    Init: function (loadWaiting, usepopupnotifications, urlUpdate, lineProductSp, aqueousAlcoholicSelectorSp,
+        anhydrousAlcoholicSelectorSp, volumeFlowCurrentSelectorSp, modeSelectorSp) {
+        this.loadWaiting = loadWaiting;
+        this.usepopupnotifications = usepopupnotifications;
+        this.urlUpdate = urlUpdate;
+        this.lineProductSp = lineProductSp;
+        this.aqueousAlcoholicSelectorSp = aqueousAlcoholicSelectorSp;
+        this.anhydrousAlcoholicSelectorSp = anhydrousAlcoholicSelectorSp;
+        this.volumeFlowCurrentSelectorSp = volumeFlowCurrentSelectorSp;
+        this.modeSelectorSp = modeSelectorSp;
+    },
+
+    SetLoadWaiting: function(display) {
+        displayAjaxLoading(display);
+        this.loadWaiting = display;
+    },
+
+    //Обновит текущие данные линий
+    UpdateLines : function() {
+        if (this.loadWaiting == true) {
+            this.SetLoadWaiting(false);
+        }
+        
+        $.ajax({
+            cache: false,
+            url: AjaxLines.urlUpdate,
+            type: 'post',
+            success: this.success_UpdateLines,
+            complete: this.resetLoadWaiting,
+            error: this.failure_UpdateLines
+        });
+    },
+
+    success_UpdateLines: function (response) {
+        $.each(response, function(i, item) {
+            AjaxLines.updateSingleLine(response[i]);
+        });
+    },
+
+    updateSingleLine: function(lineData) {
+        var lineContainer = document.getElementById('lineInfo-' + lineData.Id);
+        lineContainer.getElementsByClassName(AjaxLines.lineProductSp)[0].innerHTML = lineData.ProductTitle;
+        lineContainer.getElementsByClassName(AjaxLines.aqueousAlcoholicSelectorSp)[0].innerHTML = lineData.CurrentAqueousAlcoholicSolution;
+        lineContainer.getElementsByClassName(AjaxLines.anhydrousAlcoholicSelectorSp)[0].innerHTML = lineData.CurrentAnhydrousAlcoholicSolution;
+        lineContainer.getElementsByClassName(AjaxLines.volumeFlowCurrentSelectorSp)[0].innerHTML = lineData.VolumeFlowCurrent;
+        lineContainer.getElementsByClassName(AjaxLines.modeSelectorSp)[0].innerHTML = lineData.CurrentWorkModeTitle;
+    },
+
+    failure_UpdateLines: function () {
+        alert('Не удалось обновить данные по линии.');
+    },
+
+    resetLoadWaiting: function () {
+        AjaxLines.SetLoadWaiting(false);
+    }
+}

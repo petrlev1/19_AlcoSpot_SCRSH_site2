@@ -1,0 +1,55 @@
+﻿var AjaxBoxCommonInformation = {
+    loadWaiting: false,
+    usepopupnotifications: false,
+    urlUpdate: "", //урл запроса на обновку,
+    internaPoweLineSp: "", //селектор статуса внешнего питания
+    doorIsOpenSp: "", //селектор статуса открытия двери
+
+    Init: function (usepopupnotifications, loadWaiting, urlUpdate, internaPoweLineSp, doorIsOpenSp) {
+        this.usepopupnotifications = usepopupnotifications;
+        this.loadWaiting = loadWaiting;
+        this.urlUpdate = urlUpdate;
+        this.internaPoweLineSp = internaPoweLineSp;
+        this.doorIsOpenSp = doorIsOpenSp;
+    },
+
+    SetLoadWaiting: function(display) {
+        displayAjaxLoading(display);
+        this.loadWaiting = display;
+    },
+
+    //Обновит текущие данные
+    UpdatePowerInformation: function() {
+        if (this.loadWaiting == true) {
+            this.SetLoadWaiting(false);
+        }
+
+
+        $.ajax({
+            cache: false,
+            url: this.urlUpdate,
+            type: 'post',
+            success: this.success_UpdatePowerInformation,
+            complete: this.resetLoadWaiting,
+            error: this.failure_UpdatePowerInformation
+        });
+    },
+
+    success_UpdatePowerInformation: function (response) {
+        if (response.UpsStatus.MainsSupplyOn == true)
+            $('#' + AjaxBoxCommonInformation.internaPoweLineSp).html('Внешнее');
+        else {
+            $('#' + AjaxBoxCommonInformation.internaPoweLineSp).html('От ИБП');
+        }
+
+        if (response.DoorIsOpen == true)
+            $('#' + AjaxBoxCommonInformation.doorIsOpenSp).html('Открыта');
+        else {
+            $('#' + AjaxBoxCommonInformation.doorIsOpenSp).html('Закрыта');
+        }
+    },
+
+    failure_UpdatePowerInformation: function () {
+        //alert('Не удалось обновить статус питания.');
+    }
+}
