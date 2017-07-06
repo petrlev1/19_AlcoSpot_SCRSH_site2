@@ -9529,31 +9529,42 @@ h3 {
 
 .fontBlue {
     color: #055280;
-    font-size: 16px
 }
+
+.levelsPic {
+  height: 70px; }
+
+.lineTotals {
+  color: #055280;
+  font-weight: bold;
+  font-size: 14px; }
 
 .butBlue {
-    display: block;
-    width: 100%;
-    padding: 8px 10px;
-    margin: 0 5px;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #0478bf;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
-    border-style: none
-}
-
-.butBlue:hover {
-    color: #ffffab
-}
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 5px 5px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #0478BF;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-style: none; }
+  .butBlue:hover {
+    color: #FFFFAB; }
 
 .block2TableSet1 li {
     padding: 5px 5px
 }
+
+.lineTable1 {
+  display: table;
+  width: 100%; }
+  .lineTable1 li {
+    width: 20%;
+    border-right: 1px #c6c7cc solid; }
 
 .status {
     position: relative;
@@ -9950,6 +9961,28 @@ h3 {
     background: linear-gradient(to bottom,#fff 0%,#edf0ff 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#edf0ff',GradientType=0)
 }
+
+@media (max-width: 850px) {
+  body {
+    font-size: 11px; }
+
+  h3 {
+    font-size: 12px;
+    margin: 0 0 3px 0; }
+
+  .genContent {
+    padding: 55px 10px 100px 10px; }
+
+  .Block2Cont {
+    padding: 8px 10px; }
+
+  .butBlue {
+    font-size: 11px;
+    padding: 4px 6px;
+    margin: 3px 5px; } }
+@media (max-width: 768px) {
+  .genBlock {
+    height: auto; } }
 
 .bar-notification {
     display: none;
