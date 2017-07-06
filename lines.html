@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <link href="./АлкоСпот lines_files/h_yyg8ez3n-dvkww8by78hkld3xbdswl7xipluq6kfm1" rel="stylesheet">
+    <link href="css/h_yyg8ez3n-dvkww8by78hkld3xbdswl7xipluq6kfm1" rel="stylesheet">
 
 
 
@@ -95,7 +95,7 @@
 </div>
 
 
-    <div class="linesBlock">
+
     <div class="container">
         
 <!-- Modal - prompt -->
@@ -113,10 +113,35 @@
     </div>
 </div>
 <!-- /Modal - prompt -->
+<script>
+    $(window).on('shown.bs.modal', function (e) {
+        //$('#prompt').modal('show');
+        var callBack = e.relatedTarget.getAttribute('data-callBack');
+        $('#modal-yes-button').unbind("click");
+        $('#modal-yes-button').click(function() {
+            eval(callBack);
+            $('#prompt').modal('hide');
+        });
+    });
+</script>
 
 
-        <div class="col-sm-4 col-lg-3">
-               
+<script type="text/javascript">
+    AjaxLines.Init(false, false, '/lines',
+        //наименование продукта     
+        'lineProductSelector',
+        'aqueousAlcoholicSelector',
+        'anhydrousAlcoholicSelector',
+        'volumeFlowCurrentSelector',
+        'modeSelector');
+</script>
+
+<div class="genContent">
+    <div class="container">
+        <div class="genLinesTable">
+
+                    <div class="genLinesTableRow">
+                <div id="lineInfo-1" class="genLinesTableCell">
                     <a href="http://localhost/line/1" class="genBlock">
                         <div class="genBlockCont">
                             <h1>спирт 01</h1>
@@ -153,17 +178,35 @@
                             </div>
                         </div>
                     </a>
-
+                </div>
+                     </div>
         </div>
- 
-
     </div>
+
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $(function() {
+            setInterval(function() {
+                this.AjaxLines.UpdateLines();
+            }, 500);
+        });
+    });
+</script>
+    
+
+
     </div>
 </div>
 
-
+<script type="text/javascript">
+    AjaxBoxCommonInformation.Init(false, false, '/diagnostics/boxinformation',
+    'internaPoweLineSp',
+    'doorIsOpenSp');
+</script>
 <div class="bottomPanel">
-<div class="botPanelTable">
+    <div class="botPanelTable">
         <div class="botPanelTableRow">
             <div class="botPanelTableCell" style="width: 1px;">
                 <label for="menuCheck" class="butMenu">
@@ -181,12 +224,47 @@
                                 <div class="bottomIcons2">Дверь: <span id="doorIsOpenSp">Закрыта</span></div>
                             </div>
                         </li>
-                        <li><img src="./АлкоСпот lines_files/logoAlcospotWhite.svg"></li>
+                        <li><img src="АлкоСпот_line_files/logoAlcospotWhite.svg"></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(function() {
+        $(function() {
+            setInterval(function() {
+                this.AjaxBoxCommonInformation.UpdatePowerInformation();
+            }, 1000);
+        });
+    });
+    
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('timer-container').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime();
+        }, 500);
+    }
+    startTime();
+
+</script>
+    
+    
+
 
 </body></html>

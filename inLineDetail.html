@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost/line/1 -->
+<html class="k-webkit k-webkit59"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>АлкоСпот | спирт 01</title>
+    
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Centr IKT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link href="css/h_yyg8ez3n-dvkww8by78hkld3xbdswl7xipluq6kfm1" rel="stylesheet">
+
+
+    <script src="АлкоСпот_line_files/jquery-1.10.2.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery.validate.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery.validate.unobtrusive.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery-ui-1.10.3.custom.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery-migrate-1.2.1.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/bootstrap-3.3.4.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/public.common.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/kendo.web.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/AjaxBoxCommonInformation.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/AjaxChangeProduct.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/AjaxLinePage.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/inblockfix.js.Без названия" type="text/javascript"></script>
+
+</head>
+<body>
+    
+
+<div class="ajax-loading-block-window" style="display: none;">
+</div>
+<div id="dialog-notifications-success" title="Сообщение" style="display:none;">
+</div>
+<div id="dialog-notifications-error" title="Ошибка" style="display:none;">
+</div>
+<div id="bar-notification" class="bar-notification">
+    <span class="close" title="Закрыть">&nbsp;</span>
+</div>
+
+    <div class="admin-header-links">
+            <a href="http://localhost/admin" class="administration">Управление</a>
+    </div>
+
+
+        
+    <div class="head1">
+    <div class="head1Cont">
+        <div class="head1Cont">
+            <div class="head1Tit">спирт 01</div>
+            
+
+            <div class="upButtons">
+                <a href="http://localhost/line/1#" class="upButInfo"></a>
+                <a href="http://localhost/logout" class="upButClose"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="genContent">
+    <input name="" type="checkbox" value="" class="menuCheck" id="menuCheck">
+<div class="mainMenu">
+    <div class="mainMenuCont">
+        <div class="mainMenuHead"><label for="menuCheck" class="menuClose">ЗАКРЫТЬ</label>
+        </div>
+        <div class="mainMenuTable">
+            <ul>
+                <li>
+                    <a href="http://localhost/">Линии</a>
+                </li>
+                <li>
+                    <a href="http://localhost/line/1#">Устройства</a>
+                </li>
+                <li>
+                    <a href="http://localhost/line/1#">Устройства</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://localhost/diagnostics/services">Работоспособность служб</a>
+                </li>
+                <li>
+                    <a href="http://localhost/line/1#">Устройства</a>
+                </li>
+                <li>
+                    <a href="http://localhost/line/1#">Устройства</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://localhost/diagnostics/devices">Отчет по связи с устройствами</a>
+                </li>
+                <li>
+                    <a href="http://localhost/line/1#">Устройства</a>
+                </li>
+                <li>
+                    <a href="http://localhost/line/1#">Устройства</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <div class="container">
+        
+<!-- Modal - prompt -->
+<div id="prompt" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none;">
+                <h4 class="modal-title">Вы уверены?</h4>
+            </div>
+            <div class="modal-footer">
+                <a id="modal-yes-button" class="btn-success btn-lg btnYes" style="float: left;">Да</a>
+                <button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Нет</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal - prompt -->
+<script>
+    $(window).on('shown.bs.modal', function (e) {
+        //$('#prompt').modal('show');
+        var callBack = e.relatedTarget.getAttribute('data-callBack');
+        $('#modal-yes-button').unbind("click");
+        $('#modal-yes-button').click(function() {
+            eval(callBack);
+            $('#prompt').modal('hide');
+        });
+    });
+</script>
+
+<input data-val="true" data-val-number="The field Id must be a number." id="Id" name="Id" type="hidden" value="1">
+
+
+<div id="changeProduct" class="modal fade" role="dialog" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Смена продукта</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content-->
+                <div class="inList">
+                    <ul id="productList">
+                            <li id="product-li-2" onClick="AjaxChangeProduct.SelectProductInList(2); return false;" data-id="2">Спирт 1 сорт 0.00</li>
+                            <li id="product-li-3" onClick="AjaxChangeProduct.SelectProductInList(3); return false;" data-id="3">Спирт Базис 0.00</li>
+                            <li id="product-li-4" onClick="AjaxChangeProduct.SelectProductInList(4); return false;" data-id="4">Спирт Экстра 0.00</li>
+                            <li id="product-li-5" onClick="AjaxChangeProduct.SelectProductInList(5); return false;" data-id="5">Спирт люкс 0.00</li>
+                            <li id="product-li-6" onClick="AjaxChangeProduct.SelectProductInList(6); return false;" data-id="6">Спирт Альфа 0.00</li>
+                            <li id="product-li-7" onClick="AjaxChangeProduct.SelectProductInList(7); return false;" data-id="7">Спирт Высш. Очистки 0.00</li>
+                            <li id="product-li-8" onClick="AjaxChangeProduct.SelectProductInList(8); return false;" data-id="8">Спирт-сырец 0.00</li>
+                    </ul>
+                </div>
+                <!-- /Modal content-->
+            </div>
+            <div class="modal-footer">
+                <a class="btn-success btn-lg btnYes" onClick="AjaxChangeProduct.ChangeProduct(); return false;" style="float: left;">ВЫБРАТЬ</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Отменить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    AjaxChangeProduct.Init(false, 1);
+</script>
+
+<script type="text/javascript">
+    AjaxLinePage.Init(false, 1, '/getlineinformation/1', 
+        //наименование продукта     //код продукта          //крепость по ТУ
+        'product-Name-sp',          'product-Code-sp',      'product-Proof-sp',
+        //текущий режим             //дата  начала работы 
+        'current-Mode-Title-sp',    'current-Mode-Date-sp',
+        //Объем водно-спиртового раствора за сессию, дал (показатели тоталайзера расходомера линии)
+        'volumetricTotalizerOfSessionSp',
+        //Объем водно-спиртового раствора за сессию (приведенного к 20)
+        'aqueousAlcoholicSolutionOfSessionSp',
+        //Объем безводного спиртового раствора за сессию (приведенного к 20), дал
+        'anhydrousAlcoholicSolutionOfSessionSp',
+        //Средний объемный расход за сессию (дал/ч)
+        'averagVolumeFlowOfSessionSp',
+        //Средняя плотность за сессию
+        'averageDensityOfSessionSp',
+        //Средняя температура за сессию
+        'averageTemperatureOfSessionSp',
+        //Средняя крепость за сессию
+        'averageProofOfSessionSp',
+        //Счет бутылок за сессию
+        'bottleCountOfSessionSp',
+        //Итоговый объем ВС раствора по линии, дал
+        'aqueousAlcoholicSolutionTotalSp',
+        //Итоговый объем БВ раствора по линии, дал
+        'anhydrousAlcoholicSolutionTotalSp',
+        //Итоговое количество бутылок по линии
+        'bottleCountTotalSp',
+        //Текущий расход за сессию
+        'currentFlowOfSessionSp',
+        //Текущая крепость за сессию
+        'currentProofOfSessionSp');
+</script>
+
+<br>
+
+<div class="Block2">
+    <div class="Block2Cont">
+
+        <div class="block2Table">
+            <ul>
+                <li><span>Точка учета: <strong>спирт 01</strong></span></li>
+                <li class="tableLine"></li>
+                <li><span>Номер точки: <strong>01</strong></span></li>
+                <li class="tableLine"></li>
+                <li><span>Продукт: <strong><span id="product-Name-sp">Спирт люкс</span></strong></span></li>
+                <li class="tableLine"></li>
+                <li><span>Код продукта: <strong><span id="product-Code-sp">020/1186469</span></strong></span></li>
+                <li class="tableLine"></li>
+                <li><span>Крепость ТУ,%: <strong><span id="product-Proof-sp">96.3</span></strong></span></li>
+            </ul>
+        </div>
+        <a href="http://localhost/line/1#" data-toggle="modal" data-target="#changeProduct" class="butBlue" style="margin: 10px 0 0 0; padding: 7px 0">Сменить продукт</a>
+    </div>
+</div>
+
+<br>
+
+<div class="Block2">
+    <div class="Block2Cont">
+        <div class="block2Table padding0">
+            <ul>
+                <li style="width:30%">
+                    <h3>Режимы</h3>
+                </li>
+                <div class="block2Table">
+                    <ul>
+                        <li><span class="fontBlue">Текущий режим: <strong><span id="current-Mode-Title-sp">Тех. прогон</span></strong></span></li>
+                        <li><span class="fontBlue">Начало работы: <strong><span id="current-Mode-Date-sp">26 июня 2017 г. 11:01:38</span></strong></span></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <div class="block2Table block2TableSet1" style="margin-top: 10px">
+            <ul>
+                <li><button data-toggle="modal" id="change-mode-button-4" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/4&#39;, 4);" class="butBlue" value="004-Производство" data-id="1" onClick="return false;">004-Производство</button></li>
+                <li><button data-toggle="modal" id="change-mode-button-5" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/5&#39;, 5);" class="butBlue" value="005-Остановка" data-id="1" onClick="return false;">005-Остановка</button></li>
+                <li><button data-toggle="modal" id="change-mode-button-8" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/8&#39;, 8);" class="butBlue" value="008-Внутреннее перемещение" data-id="1" onClick="return false;">008-Внутреннее перемещение</button></li>
+                <li><button data-toggle="modal" id="change-mode-button-3" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/3&#39;, 3);" class="butBlue" value="003-Тех. прогон" data-id="1" onClick="return false;">003-Тех. прогон</button></li>
+                <li><button data-toggle="modal" id="change-mode-button-1" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/1&#39;, 1);" class="butBlue" value="001-Промывка" data-id="1" onClick="return false;">001-Промывка</button></li>
+                <li><button data-toggle="modal" id="change-mode-button-2" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/2&#39;, 2);" class="butBlue" value="002-Калибровка" data-id="1" onClick="return false;">002-Калибровка</button></li>
+            </ul>
+        </div>
+   </div>
+</div>
+<br>
+<div class="Block2">
+    <div class="Block2Cont">
+        <h3>Измерения</h3>
+        <div class="block2Table">
+            <ul>
+                <li>
+                    <span>
+                        <div>Объем р-ра: <strong><span class="-np -nm" id="volumetricTotalizerOfSessionSp">161.7</span> дал</strong></div>
+                        <div>Плотность: <strong><span class="-np -nm" id="averageDensityOfSessionSp">0.81</span> кг/л</strong></div>
+                    </span>
+                </li>
+                <li class="tableLine"></li>
+                <li>
+                    <span>
+                        <div>Объем р-ра (20°): <strong><span class="-np -nm" id="aqueousAlcoholicSolutionOfSessionSp">161.75</span> дал</strong></div>
+                        <div>Температура: <strong><span class="-np -nm" id="averageTemperatureOfSessionSp">19.51</span> C°</strong></div>
+                    </span>
+                </li>
+                <li class="tableLine"></li>
+                <li>
+                    <span>
+                        <div>Объем б/в: <strong><span class="-np -nm" id="anhydrousAlcoholicSolutionOfSessionSp">155.99</span> дал</strong></div>
+                        <div>Крепость ср.: <strong><span class="-np -nm" id="averageProofOfSessionSp">96.45</span> %</strong></div>
+                    </span>
+                </li>
+                <li class="tableLine"></li>
+                <li>
+                    <span>
+                        <div>Расход ср.: <strong><span class="-np -nm" id="averagVolumeFlowOfSessionSp">450.97</span> дал/ч</strong></div>
+                        <div>Бутылки: <strong><span class="-np -nm" id="bottleCountOfSessionSp">0</span> шт</strong></div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<div class="Block2">
+    <div class="Block2Cont">
+        <h3>Итоговые значения</h3>
+        <div class="block2Table">
+            <ul>
+                <li style="vertical-align: middle;">
+                    <div>Итоговый объем р-ра (20°C): <strong><span class="-np -nm" id="aqueousAlcoholicSolutionTotalSp">4359881.95</span> дал</strong>
+                    </div>
+                    <div>Итоговый объем б/в: <strong><span class="-np -nm" id="anhydrousAlcoholicSolutionTotalSp">4198822.53</span> дал</strong>
+                    </div>
+                    <div>Итоговое количество бутылок: <strong><span class="-np -nm" id="bottleCountTotalSp">0</span> шт</strong>
+                    </div>
+                </li>
+                <li class="tableLine"></li>
+                <li style="width: 65%">
+                    <span>
+                        <div class="block2Table" style="margin-bottom:80px;">
+                            <ul>
+                                <li>
+                                    <div class="block2Table">
+                                        <ul>
+                                            <li><img src="АлкоСпот_line_files/levels.svg"></li>
+                                            <li style="vertical-align: middle">
+                                                <span><div style="color: #055280; font-weight: bold; font-size: 18px;">Текущий расход за сессию: <br><strong style="color: #000000"><span class="-np -nm" id="currentFlowOfSessionSp">410.27</span></strong></div></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block2Table">
+                                        <ul>
+                                            <li><img src="АлкоСпот_line_files/levels.svg"></li>
+                                            <li style="vertical-align: middle">
+                                                <span><div style="color: #055280; font-weight: bold; font-size: 18px;">Текущая крепость за сессию: <br><strong style="color: #000000"><span class="-np -nm" id="currentProofOfSessionSp">96.52</span> %</strong></div></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="Block2">
+    <div class="sTable" style="padding: 10px 28px 10px 10px; width: 400px; text-align:right; position: absolute; right:0">
+        <ul>
+            <li><div class="status">Статус линии <span id="lineStatusSp" class="statusCirc Green"></span></div></li>
+            <li><span id="lineCodeStatusSp">В норме</span></li>
+        </ul>
+        <ul>
+            <li><div class="status">Статус расходомера <span id="flowMeterStatusSp" class="statusCirc Green"></span></div></li>
+            <li><span id="flowMeterCodeStatusSp">В норме</span></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $(function() {
+            setInterval(function() {
+                this.AjaxLinePage.UpdateLineInformation();
+            }, 500);
+        });
+    });
+</script>
+
+
+
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    AjaxBoxCommonInformation.Init(false, false, '/diagnostics/boxinformation',
+    'internaPoweLineSp',
+    'doorIsOpenSp');
+</script>
+<div class="bottomPanel">
+    <div class="botPanelTable">
+        <div class="botPanelTableRow">
+            <div class="botPanelTableCell" style="width: 1px;">
+                <label for="menuCheck" class="butMenu">
+                    <div class="butMenuText">МЕНЮ</div>
+                </label>
+            </div>
+            <div class="botPanelTableCell">
+                <div class="botPanelTableIn">
+                    <ul>
+                        <li>
+                            <div id="timer-container">11:23:09</div></li>
+                        <li>
+                            <div style="text-align: left; display: inline-block">
+                                <div class="bottomIcons1">Питание: <span id="internaPoweLineSp">Внешнее</span></div>
+                                <div class="bottomIcons2">Дверь: <span id="doorIsOpenSp">Закрыта</span></div>
+                            </div>
+                        </li>
+                        <li><img src="АлкоСпот_line_files/logoAlcospotWhite.svg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        $(function() {
+            setInterval(function() {
+                this.AjaxBoxCommonInformation.UpdatePowerInformation();
+            }, 1000);
+        });
+    });
+    
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('timer-container').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime();
+        }, 500);
+    }
+    startTime();
+
+</script>
+    
+    
+
+
+</body></html>
