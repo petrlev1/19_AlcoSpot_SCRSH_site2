@@ -8990,7 +8990,7 @@ a:hover {
 .head1Cont {
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 54px;
     max-width: 1170px;
     left: 0;
     right: 0;
@@ -8998,15 +8998,14 @@ a:hover {
 }
 
 .head1Tit {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 10px;
-    height: 40px;
-    font-size: 28px;
-    color: #fff;
-    white-space: nowrap
-}
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 6px 15px 0 123px;
+  font-size: 28px;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); }
 
 .upButtons {
     position: absolute;
@@ -9015,18 +9014,63 @@ a:hover {
 }
 
 .upButSize {
-    width: 140px;
-    height: 60px
-}
+  width: 103px;
+  height: 54px; }
 
-.upButs,.upButInfo,.upButClose {
-    position: relative;
-    display: inline-block;
-    width: 74px;
-    height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat
-}
+.upButs, .upButBack1, .upButInfo, .upButClose {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  height: 54px;
+  padding: 16px 18px;
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); }
+  .upButs:hover, .upButBack1:hover, .upButInfo:hover, .upButClose:hover {
+    color: #FFFFAB;
+    background-color: #0873b5; }
+
+.upButBack1 {
+  background-color: #0478BF;
+  padding-left: 33px;
+  border-left: 1px solid #4294c5;
+  border-right: 1px solid #4294c5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+  .upButBack1:before {
+    content: "\2b05";
+    position: absolute;
+    left: 5px;
+    font-size: 21px;
+    margin: -5px 3px 0 3px; }
+
+.upButInfo {
+  background-color: #0478BF;
+  border-left: 1px solid #4294c5;
+  border-right: 1px solid #4294c5; }
+
+.upButClose {
+  float: right;
+  background-color: #0478BF;
+  border-right: 1px solid #4294c5;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.upButSize {
+  width: 103px;
+  height: 54px; }
+
+.glyphicon-log-out {
+  margin: 0 0 0 5px; }
+
+.glyphicon-info-sign {
+  font-size: 27px;
+  padding: 0;
+  margin: 0 0 0 0;
+  line-height: 22px; }
 
 .UpLeftTable {
     position: absolute;
@@ -9063,16 +9107,6 @@ a:hover {
     left: 15px;
     color: #9bdaff;
     margin: 31px 0 0 0
-}
-
-.upButInfo {
-    background-color: #8cc63f;
-    background-image: url(/Content/Images/but_info.svg)
-}
-
-.upButClose {
-    background-color: #da2410;
-    background-image: url(/Content/Images/but_close.svg)
 }
 
 .genContent {
@@ -9252,25 +9286,28 @@ h1 {
 }
 
 .butMenu {
-    display: inline-block;
-    color: #fff;
-    padding: 12px 20px;
-    margin: 0;
-    background-color: #0478bf;
-    border: 5px #fff solid;
-    cursor: pointer
-}
+  display: block;
+  color: #ffffff;
+  width: 140px;
+  padding: 12px 20px;
+  margin: 0;
+  background-color: #0478BF;
+  border-left: 1px #4294c5 solid;
+  border-right: 1px #4294c5 solid;
+  cursor: pointer; }
+  .butMenu .glyphicon-menu-hamburger {
+    margin: 0 4px 0 0; }
+  .butMenu:hover .butMenuText {
+    color: #FFFFAB; }
+  .butMenu:hover {
+    background-color: #0873b5; }
 
 .butMenuText {
-    font-size: 30px;
-    font-weight: 100;
-    color: #fff;
-    padding: 0 0 0 40px;
-    background-image: url(/Content/Images/butMenu.svg);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 25%
-}
+  font-size: 21px;
+  font-weight: 100;
+  color: #ffffff;
+  padding: 0;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); }
 
 .botPanelTableIn {
     display: table;
@@ -9291,14 +9328,13 @@ h1 {
     border-right: 1px solid #4294c5
 }
 
-.bottomIcons,.bottomIcons1,.bottomIcons2 {
-    font-size: 12px;
-    font-weight: bold;
-    padding: 0 0 0 28px;
-    margin: 10px 0;
-    background-repeat: no-repeat;
-    background-position: left
-}
+.bottomIcons, .bottomIcons1, .bottomIcons2 {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0 0 0 28px;
+  margin: 6px 0;
+  background-repeat: no-repeat;
+  background-position: left; }
 
 .bottomIcons1 {
     background-image: url(/Content/Images/bottomIcons1.svg)
