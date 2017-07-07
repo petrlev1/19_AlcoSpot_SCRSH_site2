@@ -242,15 +242,8 @@
                 </div>
             </ul>
         </div>
-        <div class="block2Table block2TableSet1" style="margin-top: 10px">
-            <ul>
-                <li><button data-toggle="modal" id="change-mode-button-4" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/4&#39;, 4);" class="butBlue" value="004-Производство" data-id="1" onClick="return false;">004-Производство</button></li>
-                <li><button data-toggle="modal" id="change-mode-button-5" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/5&#39;, 5);" class="butBlue" value="005-Остановка" data-id="1" onClick="return false;">005-Остановка</button></li>
-                <li><button data-toggle="modal" id="change-mode-button-8" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/8&#39;, 8);" class="butBlue" value="008-Внутреннее перемещение" data-id="1" onClick="return false;">008-Внутреннее перемещение</button></li>
-                <li><button data-toggle="modal" id="change-mode-button-3" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/3&#39;, 3);" class="butBlue" value="003-Тех. прогон" data-id="1" onClick="return false;">003-Тех. прогон</button></li>
-                <li><button data-toggle="modal" id="change-mode-button-1" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/1&#39;, 1);" class="butBlue" value="001-Промывка" data-id="1" onClick="return false;">001-Промывка</button></li>
-                <li><button data-toggle="modal" id="change-mode-button-2" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/2&#39;, 2);" class="butBlue" value="002-Калибровка" data-id="1" onClick="return false;">002-Калибровка</button></li>
-            </ul>
+        <div class="lineButtonsBlock">
+                <button data-toggle="modal" id="change-mode-button-4" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/4&#39;, 4);" class="butBlue" value="004-Производство" data-id="1" onClick="return false;">004-Производство</button><button data-toggle="modal" id="change-mode-button-5" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/5&#39;, 5);" class="butBlue" value="005-Остановка" data-id="1" onClick="return false;">005-Остановка</button><button data-toggle="modal" id="change-mode-button-8" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/8&#39;, 8);" class="butBlue" value="008-Внутреннее перемещение" data-id="1" onClick="return false;">008-Внутреннее перемещение</button><button data-toggle="modal" id="change-mode-button-3" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/3&#39;, 3);" class="butBlue" value="003-Тех. прогон" data-id="1" onClick="return false;">003-Тех. прогон</button><button data-toggle="modal" id="change-mode-button-1" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/1&#39;, 1);" class="butBlue" value="001-Промывка" data-id="1" onClick="return false;">001-Промывка</button><button data-toggle="modal" id="change-mode-button-2" data-target="#prompt" data-callback="AjaxLinePage.ChangeLineMode(&#39;/line/changemode/1/2&#39;, 2);" class="butBlue" value="002-Калибровка" data-id="1" onClick="return false;">002-Калибровка</button>
         </div>
    </div>
 </div>
@@ -258,34 +251,26 @@
 <div class="Block2">
     <div class="Block2Cont">
         <h3>Измерения</h3>
-        <div class="block2Table">
+        <div class="block2Table tableStyle1">
             <ul>
                 <li>
-                    <span>
                         <div>Объем р-ра: <strong><span class="-np -nm" id="volumetricTotalizerOfSessionSp">161.7</span> дал</strong></div>
                         <div>Плотность: <strong><span class="-np -nm" id="averageDensityOfSessionSp">0.81</span> кг/л</strong></div>
-                    </span>
                 </li>
                 <li class="tableLine"></li>
                 <li>
-                    <span>
                         <div>Объем р-ра (20°): <strong><span class="-np -nm" id="aqueousAlcoholicSolutionOfSessionSp">161.75</span> дал</strong></div>
                         <div>Температура: <strong><span class="-np -nm" id="averageTemperatureOfSessionSp">19.51</span> C°</strong></div>
-                    </span>
                 </li>
                 <li class="tableLine"></li>
                 <li>
-                    <span>
                         <div>Объем б/в: <strong><span class="-np -nm" id="anhydrousAlcoholicSolutionOfSessionSp">155.99</span> дал</strong></div>
                         <div>Крепость ср.: <strong><span class="-np -nm" id="averageProofOfSessionSp">96.45</span> %</strong></div>
-                    </span>
                 </li>
                 <li class="tableLine"></li>
                 <li>
-                    <span>
                         <div>Расход ср.: <strong><span class="-np -nm" id="averagVolumeFlowOfSessionSp">450.97</span> дал/ч</strong></div>
                         <div>Бутылки: <strong><span class="-np -nm" id="bottleCountOfSessionSp">0</span> шт</strong></div>
-                    </span>
                 </li>
             </ul>
         </div>
@@ -297,7 +282,7 @@
         <h3>Итоговые значения</h3>
         <div class="block2Table">
             <ul>
-                <li style="vertical-align: middle;">
+                <li class="block2TableCell1">
                     <div>Итоговый объем р-ра (20°C): <strong><span class="-np -nm" id="aqueousAlcoholicSolutionTotalSp">4359881.95</span> дал</strong>
                     </div>
                     <div>Итоговый объем б/в: <strong><span class="-np -nm" id="anhydrousAlcoholicSolutionTotalSp">4198822.53</span> дал</strong>
@@ -305,17 +290,17 @@
                     <div>Итоговое количество бутылок: <strong><span class="-np -nm" id="bottleCountTotalSp">0</span> шт</strong>
                     </div>
                 </li>
-                <li class="tableLine"></li>
+              
                 <li style="width: 65%">
                     <span>
-                        <div class="block2Table" style="margin-bottom:80px;">
+                        <div class="block2Table">
                             <ul>
                                 <li>
                                     <div class="block2Table">
                                         <ul>
-                                            <li><img src="АлкоСпот_line_files/levels.svg"></li>
+                                            <li><img src="АлкоСпот_line_files/levels.svg" class="levelsPic"></li>
                                             <li style="vertical-align: middle">
-                                                <span><div style="color: #055280; font-weight: bold; font-size: 18px;">Текущий расход за сессию: <br><strong style="color: #000000"><span class="-np -nm" id="currentFlowOfSessionSp">410.27</span></strong></div></span>
+                                                <span><div class="lineTotals">Текущий расход за сессию: <br><strong style="color: #000000"><span class="-np -nm" id="currentFlowOfSessionSp">410.27</span></strong></div></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -323,9 +308,9 @@
                                 <li>
                                     <div class="block2Table">
                                         <ul>
-                                            <li><img src="АлкоСпот_line_files/levels.svg"></li>
+                                            <li><img src="АлкоСпот_line_files/levels.svg" class="levelsPic"></li>
                                             <li style="vertical-align: middle">
-                                                <span><div style="color: #055280; font-weight: bold; font-size: 18px;">Текущая крепость за сессию: <br><strong style="color: #000000"><span class="-np -nm" id="currentProofOfSessionSp">96.52</span> %</strong></div></span>
+                                                <span><div class="lineTotals">Текущая крепость за сессию: <br><strong style="color: #000000"><span class="-np -nm" id="currentProofOfSessionSp">96.52</span> %</strong></div></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -339,14 +324,9 @@
     </div>
 </div>
 <div class="Block2">
-    <div class="sTable" style="padding: 10px 28px 10px 10px; width: 400px; text-align:right; position: absolute; right:0">
+    <div class="sTable">
         <ul>
-            <li><div class="status">Статус линии <span id="lineStatusSp" class="statusCirc Green"></span></div></li>
-            <li><span id="lineCodeStatusSp">В норме</span></li>
-        </ul>
-        <ul>
-            <li><div class="status">Статус расходомера <span id="flowMeterStatusSp" class="statusCirc Green"></span></div></li>
-            <li><span id="flowMeterCodeStatusSp">В норме</span></li>
+            <li><div class="status">Статус линии <span id="lineStatusSp" class="statusCirc Green"></span><span id="lineCodeStatusSp">В норме</span></div></li>            <li><div class="status">Статус расходомера <span id="flowMeterStatusSp" class="statusCirc Green"></span><span id="flowMeterCodeStatusSp">В норме</span></div></li>
         </ul>
     </div>
 </div>
