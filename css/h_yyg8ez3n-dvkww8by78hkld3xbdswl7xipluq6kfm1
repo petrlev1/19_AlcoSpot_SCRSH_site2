@@ -1829,8 +1829,7 @@ code,kbd,pre,samp {
     font-size: 1em
 }
 
-button,input,optgroup,select,textarea {
-    margin: 0;
+button,input,optgroup,select,textagen
     font: inherit;
     color: inherit
 }
@@ -7915,14 +7914,13 @@ a:hover {
 }
 
 .head1 {
-    position: relative;
-    width: 100%;
-    top: 0;
-    background-color: #0368a6;
-    padding: 0;
-    border-bottom: 1px solid #4294c5;
-    z-index: 1
-}
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #0368A6;
+  padding: 0;
+  border-bottom: 1px solid #4294c5;
+  z-index: 1; }
 
 .head1Cont {
     position: relative;
@@ -8047,11 +8045,15 @@ a:hover {
 }
 
 .genContent {
-    max-width: 1170px;
-    left: 0;
-    right: 0;
-    margin: auto
-}
+  position: relative;
+  padding: 90px 10px 100px 10px;
+  width: 100%;
+  max-width: 1170px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
 
 h1 {
     color: #fff;
