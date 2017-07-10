@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0017)http://localhost/ -->
+<html class="k-webkit k-webkit59"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>АлкоСпот</title>
+    
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Centr IKT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link href="./АлкоСпот lines_files/h_yyg8ez3n-dvkww8by78hkld3xbdswl7xipluq6kfm1" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    
+
+<div class="ajax-loading-block-window" style="display: none;">
+</div>
+<div id="dialog-notifications-success" title="Сообщение" style="display:none;">
+</div>
+<div id="dialog-notifications-error" title="Ошибка" style="display:none;">
+</div>
+<div id="bar-notification" class="bar-notification">
+    <span class="close" title="Закрыть">&nbsp;</span>
+</div>
+
+    <div class="admin-header-links">
+            <a href="http://localhost/admin" class="administration">Управление</a>
+    </div>
+
+
+        
+    <div class="head1">
+    <div class="head1Cont">
+        <div class="head1Cont">
+            <div class="head1Tit">Точки учета</div>
+            
+
+            <div class="upButtons">
+                <a href="http://localhost/#" class="upButInfo"></a>
+                <a href="http://localhost/logout" class="upButClose"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="genContent">
+    <input name="" type="checkbox" value="" class="menuCheck" id="menuCheck">
+<div class="mainMenu">
+    <div class="mainMenuCont">
+        <div class="mainMenuHead"><label for="menuCheck" class="menuClose">ЗАКРЫТЬ</label>
+        </div>
+        <div class="mainMenuTable">
+            <ul>
+                <li>
+                    <a href="http://localhost/">Линии</a>
+                </li>
+                <li>
+                    <a href="http://localhost/#">Устройства</a>
+                </li>
+                <li>
+                    <a href="http://localhost/#">Устройства</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://localhost/diagnostics/services">Работоспособность служб</a>
+                </li>
+                <li>
+                    <a href="http://localhost/#">Устройства</a>
+                </li>
+                <li>
+                    <a href="http://localhost/#">Устройства</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://localhost/diagnostics/devices">Отчет по связи с устройствами</a>
+                </li>
+                <li>
+                    <a href="http://localhost/#">Устройства</a>
+                </li>
+                <li>
+                    <a href="http://localhost/#">Устройства</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <div class="container">
+        
+<!-- Modal - prompt -->
+<div id="prompt" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none;">
+                <h4 class="modal-title">Вы уверены?</h4>
+            </div>
+            <div class="modal-footer">
+                <a id="modal-yes-button" class="btn-success btn-lg btnYes" style="float: left;">Да</a>
+                <button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Нет</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal - prompt -->
+<script>
+    $(window).on('shown.bs.modal', function (e) {
+        //$('#prompt').modal('show');
+        var callBack = e.relatedTarget.getAttribute('data-callBack');
+        $('#modal-yes-button').unbind("click");
+        $('#modal-yes-button').click(function() {
+            eval(callBack);
+            $('#prompt').modal('hide');
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    AjaxLines.Init(false, false, '/lines',
+        //наименование продукта     
+        'lineProductSelector',
+        'aqueousAlcoholicSelector',
+        'anhydrousAlcoholicSelector',
+        'volumeFlowCurrentSelector',
+        'modeSelector');
+</script>
+
+<div class="genContent">
+    <div class="container">
+    ...
+     content
+    ...
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $(function() {
+            setInterval(function() {
+                this.AjaxLines.UpdateLines();
+            }, 500);
+        });
+    });
+</script>
+    
+
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    AjaxBoxCommonInformation.Init(false, false, '/diagnostics/boxinformation',
+    'internaPoweLineSp',
+    'doorIsOpenSp');
+</script>
+<div class="bottomPanel">
+    <div class="botPanelTable">
+        <div class="botPanelTableRow">
+            <div class="botPanelTableCell" style="width: 1px;">
+                <label for="menuCheck" class="butMenu">
+                    <div class="butMenuText">МЕНЮ</div>
+                </label>
+            </div>
+            <div class="botPanelTableCell">
+                <div class="botPanelTableIn">
+                    <ul>
+                        <li>
+                            <div id="timer-container">11:27:30</div></li>
+                        <li>
+                            <div style="text-align: left; display: inline-block">
+                                <div class="bottomIcons1">Питание: <span id="internaPoweLineSp">Внешнее</span></div>
+                                <div class="bottomIcons2">Дверь: <span id="doorIsOpenSp">Закрыта</span></div>
+                            </div>
+                        </li>
+                        <li><img src="АлкоСпот _ line_files/logoAlcospotWhite.svg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        $(function() {
+            setInterval(function() {
+                this.AjaxBoxCommonInformation.UpdatePowerInformation();
+            }, 1000);
+        });
+    });
+    
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('timer-container').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime();
+        }, 500);
+    }
+    startTime();
+
+</script>
+    
+    
+
+
+</body></html>
