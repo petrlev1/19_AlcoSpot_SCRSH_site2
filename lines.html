@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<!-- saved from url=(0017)http://localhost/ -->
+<!-- saved from url=(0023)http://localhost/line/1 -->
 <html class="k-webkit k-webkit59"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>АлкоСпот</title>
+    <title>АлкоСпот | спирт 01</title>
     
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="generator" content="Centr IKT">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    
-    <link href="css/h_yyg8ez3n-dvkww8by78hkld3xbdswl7xipluq6kfm1" rel="stylesheet">
+    <link href="css/h_yyg8ez3n-dvkww8by78hkld3xbdswl7xipluq6kfm1.css" rel="stylesheet">
 
 
-
+    <script src="АлкоСпот_line_files/jquery-1.10.2.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery.validate.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery.validate.unobtrusive.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery-ui-1.10.3.custom.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/jquery-migrate-1.2.1.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/bootstrap-3.3.4.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/public.common.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/kendo.web.min.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/AjaxBoxCommonInformation.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/AjaxChangeProduct.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/AjaxLinePage.js.Без названия" type="text/javascript"></script>
+<script src="АлкоСпот_line_files/inblockfix.js.Без названия" type="text/javascript"></script>
 
 </head>
 <body>
@@ -37,12 +47,12 @@
     <div class="head1">
     <div class="head1Cont">
         <div class="head1Cont">
-            <div class="head1Tit">Точки учета</div>
+            <a href="#" class="upButBack1">Назад</a><div class="head1Tit">спирт 01</div>
             
 
             <div class="upButtons">
-                <a href="http://localhost/#" class="upButInfo"></a>
-                <a href="http://localhost/logout" class="upButClose"></a>
+                <a href="http://localhost/line/1#" class="upButInfo"><span class="glyphicon glyphicon-info-sign"></span></a>
+                <a href="http://localhost/logout" class="upButClose">Выйти<span class="glyphicon glyphicon-log-out"></span></a>
             </div>
         </div>
     </div>
@@ -61,10 +71,10 @@
                     <a href="http://localhost/">Линии</a>
                 </li>
                 <li>
-                    <a href="http://localhost/#">Устройства</a>
+                    <a href="http://localhost/line/1#">Устройства</a>
                 </li>
                 <li>
-                    <a href="http://localhost/#">Устройства</a>
+                    <a href="http://localhost/line/1#">Устройства</a>
                 </li>
             </ul>
             <ul>
@@ -72,10 +82,10 @@
                     <a href="http://localhost/diagnostics/services">Работоспособность служб</a>
                 </li>
                 <li>
-                    <a href="http://localhost/#">Устройства</a>
+                    <a href="http://localhost/line/1#">Устройства</a>
                 </li>
                 <li>
-                    <a href="http://localhost/#">Устройства</a>
+                    <a href="http://localhost/line/1#">Устройства</a>
                 </li>
             </ul>
             <ul>
@@ -83,10 +93,10 @@
                     <a href="http://localhost/diagnostics/devices">Отчет по связи с устройствами</a>
                 </li>
                 <li>
-                    <a href="http://localhost/#">Устройства</a>
+                    <a href="http://localhost/line/1#">Устройства</a>
                 </li>
                 <li>
-                    <a href="http://localhost/#">Устройства</a>
+                    <a href="http://localhost/line/1#">Устройства</a>
                 </li>
             </ul>
         </div>
@@ -96,7 +106,7 @@
 
 
 
-    <div class="container">
+  
         
 <!-- Modal - prompt -->
 <div id="prompt" class="modal fade" role="dialog">
@@ -125,20 +135,41 @@
     });
 </script>
 
+<input data-val="true" data-val-number="The field Id must be a number." id="Id" name="Id" type="hidden" value="1">
 
-<script type="text/javascript">
-    AjaxLines.Init(false, false, '/lines',
-        //наименование продукта     
-        'lineProductSelector',
-        'aqueousAlcoholicSelector',
-        'anhydrousAlcoholicSelector',
-        'volumeFlowCurrentSelector',
-        'modeSelector');
-</script>
 
-<div class="genContent">
-    <div class="container">
-        <div class="genLinesTable">
+<div id="changeProduct" class="modal fade" role="dialog" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Смена продукта</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content-->
+                <div class="inList">
+                    <ul id="productList">
+                            <li id="product-li-2" onClick="AjaxChangeProduct.SelectProductInList(2); return false;" data-id="2">Спирт 1 сорт 0.00</li>
+                            <li id="product-li-3" onClick="AjaxChangeProduct.SelectProductInList(3); return false;" data-id="3">Спирт Базис 0.00</li>
+                            <li id="product-li-4" onClick="AjaxChangeProduct.SelectProductInList(4); return false;" data-id="4">Спирт Экстра 0.00</li>
+                            <li id="product-li-5" onClick="AjaxChangeProduct.SelectProductInList(5); return false;" data-id="5">Спирт люкс 0.00</li>
+                            <li id="product-li-6" onClick="AjaxChangeProduct.SelectProductInList(6); return false;" data-id="6">Спирт Альфа 0.00</li>
+                            <li id="product-li-7" onClick="AjaxChangeProduct.SelectProductInList(7); return false;" data-id="7">Спирт Высш. Очистки 0.00</li>
+                            <li id="product-li-8" onClick="AjaxChangeProduct.SelectProductInList(8); return false;" data-id="8">Спирт-сырец 0.00</li>
+                    </ul>
+                </div>
+                <!-- /Modal content-->
+            </div>
+            <div class="modal-footer">
+                <a class="btn-success btn-lg btnYes" onClick="AjaxChangeProduct.ChangeProduct(); return false;" style="float: left;">ВЫБРАТЬ</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Отменить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="genLinesTable">
 
                     <div class="genLinesTableRow">
                 <div id="lineInfo-1" class="genLinesTableCell">
@@ -181,43 +212,26 @@
                 </div>
                      </div>
         </div>
-    </div>
+
+
+
 
 </div>
 
-<script type="text/javascript">
-    $(function() {
-        $(function() {
-            setInterval(function() {
-                this.AjaxLines.UpdateLines();
-            }, 500);
-        });
-    });
-</script>
-    
 
-
-    </div>
-</div>
-
-<script type="text/javascript">
-    AjaxBoxCommonInformation.Init(false, false, '/diagnostics/boxinformation',
-    'internaPoweLineSp',
-    'doorIsOpenSp');
-</script>
 <div class="bottomPanel">
     <div class="botPanelTable">
         <div class="botPanelTableRow">
             <div class="botPanelTableCell" style="width: 1px;">
                 <label for="menuCheck" class="butMenu">
-                    <div class="butMenuText">МЕНЮ</div>
+                    <div class="butMenuText"><span class="glyphicon glyphicon-menu-hamburger"></span>МЕНЮ</div>
                 </label>
             </div>
             <div class="botPanelTableCell">
                 <div class="botPanelTableIn">
                     <ul>
                         <li>
-                            <div id="timer-container">11:27:30</div></li>
+                            <div id="timer-container">11:23:09</div></li>
                         <li>
                             <div style="text-align: left; display: inline-block">
                                 <div class="bottomIcons1">Питание: <span id="internaPoweLineSp">Внешнее</span></div>
