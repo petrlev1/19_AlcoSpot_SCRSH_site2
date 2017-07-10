@@ -8379,9 +8379,7 @@ h1 {
 }
 
 .sTable {
-    position: absolute; display: table;
-    padding: 10px 28px 10px 10px; width: 620px; text-align:right; right:0
-}
+  display: table; }
 
 .sTable ul {
     display: table-row
