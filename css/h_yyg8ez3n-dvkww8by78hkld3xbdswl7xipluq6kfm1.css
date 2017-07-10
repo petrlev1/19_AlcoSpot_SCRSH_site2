@@ -2488,8 +2488,6 @@ pre code {
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto
 }
@@ -8067,6 +8065,10 @@ h1 {
     padding: 0
 }
 
+.linesBlock .col-sm-4 {
+  padding-right: 3px;
+  padding-left: 3px; }
+
 .genLinesTable {
     display: table;
     width: 100%;
@@ -8084,21 +8086,24 @@ h1 {
 }
 
 .genBlock {
-    display: block;
-    color: #333;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    margin: auto;
-    border: 4px solid #8cc63f;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(top,#fff 0%,#edf0ff 100%);
-    background: -webkit-linear-gradient(top,#fff 0%,#edf0ff 100%);
-    background: linear-gradient(to bottom,#fff 0%,#edf0ff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#edf0ff',GradientType=0)
-}
+  display: block;
+  position: relative;
+  height: 270px;
+  color: #333333;
+  border: 4px solid #8CC63F;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 5px 0;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #edf0ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 );
+  /* IE6-9 */ }
 
 .message-error,.field-validation-error,.username-not-available-status,.poll-vote-error,.password-error {
     display: block;
@@ -8120,17 +8125,19 @@ h1 {
     text-align: center
 }
 
-.genBlockCont h1 {
+  .genBlockCont h1 {
     font-size: 24px;
     font-weight: bold;
-    margin: 3px
-}
+    margin: 0;
+    color: #333333; }
 
-.genBlockCont h2 {
+  .genBlockCont h2 {
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
     font-size: 14px;
     font-weight: bold;
-    margin: 15px
-}
+    margin: 3px 0 5px 0; }
 
 .genBlockTable {
     display: table;
@@ -8148,19 +8155,20 @@ h1 {
 
 .genBlockItem,.genBlockItem1,.genBlockItem2,.genBlockItem3,.genBlockItem4 {
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
     padding: 8px 8px;
     line-height: 15px
 }
 
 .genBlockItem h1,.genBlockItem1 h1,.genBlockItem2 h1,.genBlockItem3 h1,.genBlockItem4 h1 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px !important;
     height: 28px;
-    padding: 3px 0 0 32px;
+    padding: 3px 0 0 25px;
     margin: 0 0 3px 0;
     background-repeat: no-repeat;
-    background-position: -2px
+    background-position: -2px;
+    background-size: 25px;
 }
 
 .genBlockItem1 h1 {
@@ -8186,11 +8194,13 @@ h1 {
     color: #333
 }
 
-.genBlockCont h2 {
+  .genBlockCont h2 {
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
     font-size: 14px;
     font-weight: bold;
-    margin: 15px
-}
+    margin: 3px 0 5px 0; }
 
 .bottomPanel {
     position: fixed;
