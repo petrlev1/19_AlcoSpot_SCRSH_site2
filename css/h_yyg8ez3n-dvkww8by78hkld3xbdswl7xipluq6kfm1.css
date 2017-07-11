@@ -7952,24 +7952,25 @@ a:hover {
   width: 103px;
   height: 54px; }
 
-.upButs, .upButBack1, .upButInfo, .upButClose {
+.upButs, .upButBack1, .upButAdmin, .upButInfo, .upButClose {
   position: relative;
   display: inline-block;
+  float: left;
   font-size: 16px;
   color: #fff;
   height: 54px;
   padding: 16px 18px;
   text-align: center;
+  background-color: #0478BF;
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); }
-  .upButs:hover, .upButBack1:hover, .upButInfo:hover, .upButClose:hover {
+  .upButs:hover, .upButBack1:hover, .upButAdmin:hover, .upButInfo:hover, .upButClose:hover {
     color: #FFFFAB;
     background-color: #0873b5; }
 
 .upButBack1 {
-  background-color: #0478BF;
   padding-left: 33px;
   border-left: 1px solid #4294c5;
   border-right: 1px solid #4294c5;
@@ -7982,30 +7983,40 @@ a:hover {
     font-size: 21px;
     margin: -5px 3px 0 3px; }
 
-.upButInfo {
-  background-color: #0478BF;
+.upButAdmin {
   border-left: 1px solid #4294c5;
-  border-right: 1px solid #4294c5; }
+  border-right: 1px solid #4294c5;
+  padding-left: 33px;
+  padding-right: 12px; }
+  .upButAdmin span {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 16px; }
+
+.upButInfo {
+  border-left: 1px solid #4294c5;
+  border-right: 1px solid #4294c5;
+  margin: 0 10px; }
+  .upButInfo span {
+    font-size: 27px;
+    padding: 0;
+    margin: 0 0 0 0;
+    line-height: 22px; }
 
 .upButClose {
   float: right;
-  background-color: #0478BF;
   border-right: 1px solid #4294c5;
+  border-left: 1px solid #4294c5;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; }
+  .upButClose span {
+    margin: 0 0 0 5px; }
 
 .upButSize {
   width: 103px;
   height: 54px; }
 
-.glyphicon-log-out {
-  margin: 0 0 0 5px; }
-
-.glyphicon-info-sign {
-  font-size: 27px;
-  padding: 0;
-  margin: 0 0 0 0;
-  line-height: 22px; }
 
 .UpLeftTable {
     position: absolute;
