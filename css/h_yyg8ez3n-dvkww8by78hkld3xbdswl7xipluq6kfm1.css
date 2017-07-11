@@ -8940,6 +8940,8 @@ h3 {
 
   .genContent {
     padding: 35px 10px 100px 10px; }
+    
+    .linesBlock { margin-top: 25px; }
 
   .Block2Cont {
     padding: 8px 10px; }
